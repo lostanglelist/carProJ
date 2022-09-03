@@ -17,8 +17,13 @@ namespace carWebApplication.Controllers
         {
             return View();
         }
-
+       
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult cardetail()
         {
             return View();
         }
