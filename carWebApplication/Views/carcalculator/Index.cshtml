@@ -8,21 +8,22 @@
 <main id="main">
 
     <!-- Head Section -->
-    <section class="small-section bg-gray-lighter">
+    <section class="small-section bg-dark-alfa-30 parallax-2" style="background-color:black;">
+        
         <div class="relative container align-left">
 
             <div class="row">
 
                 <div class="col-md-8">
-                    <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Single Product</h1>
-                    <div class="hs-line-4 font-alt black">
+                    <h1 class="hs-line-11 font-alt mb-20 mb-xs-0">Products</h1>
+                    <div class="hs-line-4 font-alt white">
                         Choose the best products in our shop
                     </div>
                 </div>
 
                 <div class="col-md-4 mt-30">
                     <div class="mod-breadcrumbs font-alt align-right">
-                        <a href="#">Home</a>&nbsp;/&nbsp;<a href="#">Shop</a>&nbsp;/&nbsp;<span>Single</span>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>&nbsp;/&nbsp;<a href="#">Products</a>
                     </div>
 
                 </div>
@@ -64,7 +65,7 @@
                         <div class="col-6 lead mt-0 mb-20">
 
 
-                            <strong>12,000,000 ฿</strong>
+                            <strong>12,000,000 ฿</strong> &nbsp;&nbsp;&nbsp;<h6 style="color:red;">*Interest 3 %</h6>
 
                         </div>
 
@@ -87,13 +88,26 @@
 
                     <div class="mb-30">
                         <form asp-controller="carcalculator" asp-action="C8Cal" method="post" class="form">
-
-
-                            Place down payment : <input type="number" name="DownC8" class="input-lg round" min="1200000" max="12000000" placeholder="min = 1,200,000 ฿" style="width:300px !important" /> <br /><br />
-                            Month to pay : <input type="number" name="MonthC8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            <div class="row">
+                            <div class="col">
+                                Place down payment :
+                            </div>
+                            <div class="col">
+                                <input type="number" name="DownC8" class="input-lg round" min="1200000" max="12000000" placeholder="min = 1,200,000 ฿" style="width:300px !important" required aria-required="true"> <br /><br />
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Month to pay :
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="MonthC8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:300px !important" required aria-required="true"> <br /><br />
+                                </div>
+                            </div>
                             @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
-
-                            <input type="submit" value="calculate" />
+                            <div align="right">
+                            <input class="btn btn-mod btn-large btn-round" style="border-color:black;" type="submit" value="calculate" />
+                            </div>
                             @if (ViewBag.moneyc8 != null)
                             {
                                 <script type="text/javascript">
@@ -191,44 +205,56 @@
                 <!-- Product Description -->
                 <div class="col-sm-8 col-md-5 mb-xs-40">
 
-                    <h3 class="mt-0">Religion Jersey Polo Shirt</h3>
+                    <h3 class="mt-0">Audi r8 coupe v10 plus</h3>
 
                     <hr class="mt-0 mb-30" />
 
                     <div class="row">
                         <div class="col-6 lead mt-0 mb-20">
-
-                            <del class="section-text">$50.00</del>
-                            <strong>$25.99</strong>
-
-                        </div>
-                        <div class="col-6 align-right section-text">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            &nbsp;(3 reviews)
+                           
+                            <strong>18,000,000 ฿</strong> &nbsp;&nbsp;&nbsp;<h6 style="color:red;">*Interest 3 %</h6>
                         </div>
                     </div>
 
                     <hr class="mt-0 mb-30" />
 
-                    <div class="section-text mb-30">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et dui id dui suscipit pharetra vitae quis urna. Ut scelerisque quam quis erat tincidunt, vel vehicula turpis bibendum.
-                    </div>
+                    
+                        <ul>
+                        <li>3.8L V6 engine</li>
+                        <li>600 horsepower</li>
+                        <li>481 lb-ft of torque</li>
+                        <li>Front And Rear Anti-Roll Bars</li>
+                        <li>Speed Sensitive Rain Detecting Variable Intermittent Wipers</li>
+                        <li>Electric Power-Assist Steering</li>
+                        <li>Siriusxm Traffic Real-Time Traffic Display</li>
+                        </ul>
+                   
 
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
                         <form asp-controller="carcalculator" asp-action="R8Cal" method="post" class="form">
 
-
-                            Place down payment : <input type="number" name="DownR8" class="input-lg round" min="1800000" max="18000000" placeholder="min = 1,800,000 ฿" style="width:300px !important" /> <br /><br />
-                            Month to pay : <input type="number" name="MonthR8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            <div class="row">
+                                <div class="col">
+                                    Place down payment :
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="DownR8" class="input-lg round" min="1800000" max="18000000" placeholder="min = 1,800,000 ฿" style="width:300px !important" required aria-required="true"> <br /><br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Month to pay :
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="MonthR8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:300px !important" required aria-required="true"> <br /><br />
+                                </div>
+                            </div>
                             @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
-
-                            <input type="submit" value="calculate" />
+                            <div align="right">
+                                <input class="btn btn-mod btn-large btn-round" style="border-color:black;" type="submit" value="calculate" />
+                            </div>
                             @if (ViewBag.moneyr8 != null)
                             {
                                 <script type="text/javascript">
@@ -258,10 +284,10 @@
                                 <i class="fa fa-paper-plane-o"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">Free Shipping</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
+                    <br />
                     <!-- Features Item -->
                     <div class="alt-service-wrap">
                         <div class="alt-service-item">
@@ -269,10 +295,10 @@
                                 <i class="fa fa-clock-o"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">14 days moneyback</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
+                    <br />
                     <!-- Features Item -->
                     <div class="alt-service-wrap">
                         <div class="alt-service-item">
@@ -280,7 +306,6 @@
                                 <i class="fa fa-gift"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">100% Original</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
@@ -323,44 +348,55 @@
                 <!-- Product Description -->
                 <div class="col-sm-8 col-md-5 mb-xs-40">
 
-                    <h3 class="mt-0">Chevrolet Corvett Stringray C8</h3>
+                    <h3 class="mt-0">Nissan GT-R Nismo</h3>
 
                     <hr class="mt-0 mb-30" />
 
                     <div class="row">
                         <div class="col-6 lead mt-0 mb-20">
+                           
+                            <strong>15,000,000 ฿</strong> &nbsp;&nbsp;&nbsp;<h6 style="color:red;">*Interest 3 %</h6>
 
-                            <del class="section-text">$50.00</del>
-                            <strong>$25.99</strong>
-
-                        </div>
-                        <div class="col-6 align-right section-text">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            &nbsp;(3 reviews)
-                        </div>
+                        </div>                       
                     </div>
 
                     <hr class="mt-0 mb-30" />
 
-                    <div class="section-text mb-30">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et dui id dui suscipit pharetra vitae quis urna. Ut scelerisque quam quis erat tincidunt, vel vehicula turpis bibendum.
-                    </div>
+                   <ul>
+                        <li>5.2L V10 engine</li>
+                        <li>602 horsepower</li>
+                        <li>413 lb-ft of torque</li>
+                        <li>Electronic Brake Force Distribution</li>
+                        <li>Carbon-composite Fr Cross Member/Radiator Support</li>
+                        <li>Multi-function Steering Wheel</li>
+                        <li>Speed Sensitive Power Steering</li>
+                   </ul>
 
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
                         <form asp-controller="carcalculator" asp-action="GTRCal" method="post" class="form">
 
-
-                            Place down payment : <input type="number" name="DownGTR" class="input-lg round" min="1500000" max="15000000" placeholder="min = 1,500,000 ฿" style="width:300px !important" /> <br /><br />
-                            Month to pay : <input type="number" name="MonthGTR" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            <div class="row">
+                                <div class="col">
+                                    Place down payment :
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="DownGTR" class="input-lg round" min="1500000" max="15000000" placeholder="min = 1,500,000 ฿" style="width:300px !important" required aria-required="true"> <br /><br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Month to pay :
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="MonthGTR" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:300px !important" required aria-required="true"> <br /><br />
+                                </div>
+                            </div>
                             @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
-
-                            <input type="submit" value="calculate" />
+                            <div align="right">
+                                <input class="btn btn-mod btn-large btn-round" style="border-color:black;" type="submit" value="calculate" />
+                            </div>
                             @if (ViewBag.moneygtr != null)
                             {
                                 <script type="text/javascript">
@@ -390,10 +426,10 @@
                                 <i class="fa fa-paper-plane-o"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">Free Shipping</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
+                    <br />
                     <!-- Features Item -->
                     <div class="alt-service-wrap">
                         <div class="alt-service-item">
@@ -401,10 +437,10 @@
                                 <i class="fa fa-clock-o"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">14 days moneyback</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
+                    <br />
                     <!-- Features Item -->
                     <div class="alt-service-wrap">
                         <div class="alt-service-item">
@@ -412,7 +448,6 @@
                                 <i class="fa fa-gift"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">100% Original</h3>
-                            Vivamus neque orci, ultricies blandit ultricies vel, semper..
                         </div>
                     </div>
                     <!-- End Features Item -->
@@ -432,3 +467,40 @@
 
 
 </main>
+<!-- Foter -->
+<footer class="page-section bg-gray-lighter footer pb-60">
+    <div class="container">
+        <!-- Social Links -->
+        <div class="footer-social-links mb-110 mb-xs-60">
+            <a href="https://www.facebook.com/wachira.pach/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i> <span class="sr-only">Facebook profile</span></a>
+            <a href="https://www.facebook.com/PoySorravich" title="Facebook" target="_blank"><i class="fa fa-facebook"></i> <span class="sr-only">Facebook profile</span></a>
+
+        </div>
+        <!-- End Social Links -->
+        <!-- Footer Text -->
+        <div class="footer-text">
+
+            <!-- Copyright -->
+            <div class="footer-copy font-alt">
+                <a asp-area="" asp-controller="Home" asp-action="Index" target="_blank">© DARKHOUSE STUDIO</a>.
+            </div>
+            <!-- End Copyright -->
+
+            <div class="footer-made">
+                WISH YOU ALL THE BEST.
+            </div>
+
+        </div>
+        <!-- End Footer Text -->
+
+    </div>
+
+
+    <!-- Top Link -->
+    <div class="local-scroll">
+        <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i><span class="sr-only">Scroll to top</span></a>
+    </div>
+    <!-- End Top Link -->
+
+</footer>
+<!-- End Foter -->
