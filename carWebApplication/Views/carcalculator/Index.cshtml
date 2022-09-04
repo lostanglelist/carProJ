@@ -86,18 +86,19 @@
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
-                        <form asp-controller="carcalculator" asp-action="Carcal" method="post" class="form">
+                        <form asp-controller="carcalculator" asp-action="C8Cal" method="post" class="form">
 
-                            Money : <input type="number" name="minMoney" class="input-lg round" min="120000" placeholder="min = 120,000 ฿" /> <br /><br />
-                            <input type="number" class="input-lg round" min="1" max="12" value="1" />
-                            <a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>
+
+                            Place down payment : <input type="number" name="DownC8" class="input-lg round" min="1200000" max="12000000" placeholder="min = 1,200,000 ฿" style="width:300px !important" /> <br /><br />
+                            Month to pay : <input type="number" name="MonthC8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
 
                             <input type="submit" value="calculate" />
-                            @if (ViewBag.result != null)
+                            @if (ViewBag.moneyc8 != null)
                             {
                                 <script type="text/javascript">
                                     window.onload = function () {
-                                        alert("Money : @ViewBag.result")
+                                        alert("You place a down payment of @ViewBag.moneyc8 Baht\nMonth to pay : @ViewBag.monthc8\nInterest per month : @ViewBag.interestc8 Baht\ninstallment per month : @ViewBag.installmentc8 Baht")
                                     }
 
                                 </script>
@@ -220,9 +221,24 @@
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
-                        <form method="post" action="#" class="form">
-                            <input type="number" class="input-lg round" min="1" max="100" value="1" />
-                            <a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>
+                        <form asp-controller="carcalculator" asp-action="R8Cal" method="post" class="form">
+
+
+                            Place down payment : <input type="number" name="DownR8" class="input-lg round" min="1800000" max="18000000" placeholder="min = 1,800,000 ฿" style="width:300px !important" /> <br /><br />
+                            Month to pay : <input type="number" name="MonthR8" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
+
+                            <input type="submit" value="calculate" />
+                            @if (ViewBag.moneyr8 != null)
+                            {
+                                <script type="text/javascript">
+                                    window.onload = function () {
+                                        alert("You place a down payment of @ViewBag.moneyr8 Baht\nMonth to pay : @ViewBag.monthr8\nInterest per month : @ViewBag.interestr8 Baht\ninstallment per month : @ViewBag.installmentr8 Baht")
+                                    }
+
+                                </script>
+                            }
+                            @*<p>@ViewBag.result</p>*@
                         </form>
                     </div>
 
@@ -337,9 +353,24 @@
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
-                        <form method="post" action="#" class="form">
-                            <input type="number" class="input-lg round" min="1" max="100" value="1" />
-                            <a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>
+                        <form asp-controller="carcalculator" asp-action="GTRCal" method="post" class="form">
+
+
+                            Place down payment : <input type="number" name="DownGTR" class="input-lg round" min="1500000" max="15000000" placeholder="min = 1,500,000 ฿" style="width:300px !important" /> <br /><br />
+                            Month to pay : <input type="number" name="MonthGTR" class="input-lg round" min="1" max="100" placeholder="1 - 100" style="width:200px !important" /> <br /><br />
+                            @*<a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>*@
+
+                            <input type="submit" value="calculate" />
+                            @if (ViewBag.moneygtr != null)
+                            {
+                                <script type="text/javascript">
+                                    window.onload = function () {
+                                        alert("You place a down payment of @ViewBag.moneygtr Baht\nMonth to pay : @ViewBag.monthgtr\nInterest per month : @ViewBag.interestgtr Baht\ninstallment per month : @ViewBag.installmentgtr Baht")
+                                    }
+
+                                </script>
+                            }
+                            @*<p>@ViewBag.result</p>*@
                         </form>
                     </div>
 
