@@ -1,4 +1,8 @@
 ﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@{
     ViewData["Title"] = "cardetail";
 }
 <main id="main">
@@ -39,14 +43,14 @@
 
                     <div class="post-prev-img">
                         <img src="~/images/car/corvett_c8.jpg" />
-                        
-                        
+
+
                         <div class="intro-label">
                             <span class="badge badge-danger bg-red">Sale</span>
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <!-- End Product Images -->
                 <!-- Product Description -->
@@ -59,11 +63,11 @@
                     <div class="row">
                         <div class="col-6 lead mt-0 mb-20">
 
-                            
+
                             <strong>12,000,000 ฿</strong>
 
                         </div>
-                      
+
                     </div>
 
                     <hr class="mt-0 mb-30" />
@@ -76,27 +80,27 @@
                         <li aria-level="1">Rear Camera Mirror Rear park assist and HD rear vision camera</li>
                         <li aria-level="1">Bose premium 10-speaker system</li>
                         <li aria-level="1">Chevrvolet Infotainment 3 system</li>
-                        
+
                     </ul>
 
                     <hr class="mt-0 mb-30" />
 
                     <div class="mb-30">
-                        <form asp-controller="carcal" asp-action="car" method="post" class="form">
-                            
+                        <form asp-controller="carcalculator" asp-action="Carcal" method="post" class="form">
+
                             Money : <input type="number" name="minMoney" class="input-lg round" min="120000" placeholder="min = 120,000 ฿" /> <br /><br />
                             <input type="number" class="input-lg round" min="1" max="12" value="1" />
                             <a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>
-                            
+
                             <input type="submit" value="calculate" />
                             <p>@ViewBag.result</p>
                         </form>
-                        
+
                     </div>
 
                     <hr class="mt-0 mb-30" />
 
-                  
+
 
                 </div>
                 <!-- End Product Description -->
@@ -121,7 +125,7 @@
                                 <i class="fa fa-clock-o"></i>
                             </div>
                             <h3 class="alt-services-title font-alt">14 days moneyback</h3>
-                           <br />
+                            <br />
                         </div>
                     </div>
                     <!-- End Features Item -->
@@ -144,16 +148,14 @@
 
             </div>
             <!-- End Product Content -->
-            </div>
-            <!-- End Product Content -->
-     
+        </div>
+        <!-- End Product Content -->
+
     </section>
     <!-- End Section -->
-
     <!-- Divider -->
     <hr class="mt-0 mb-0 " />
     <!-- End Divider -->
-
     <!-- Section -->
     <section class="page-section">
         <div class="container relative">
@@ -165,7 +167,7 @@
                 <div class="col-md-4 mb-md-30">
 
                     <div class="post-prev-img">
-                        
+
                         <img src="~/images/car/wp8112164-audi-r8-v10-plus-wallpapers.jpg" />
 
                         <div class="intro-label">
@@ -270,7 +272,6 @@
 
     </section>
     <!-- End Section -->
-
     <!-- Divider -->
     <hr class="mt-0 mb-0 " />
     <!-- End Divider -->
@@ -388,6 +389,6 @@
 
     </section>
     <!-- End Section -->
-    
-              
+
+
 </main>
