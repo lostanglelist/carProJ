@@ -93,7 +93,16 @@
                             <a href="#" class="btn btn-mod btn-large btn-round">Add to Cart</a>
 
                             <input type="submit" value="calculate" />
-                            <p>@ViewBag.result</p>
+                            @if (ViewBag.result != null)
+                            {
+                                <script type="text/javascript">
+                                    window.onload = function () {
+                                        alert("Money : @ViewBag.result")
+                                    }
+
+                                </script>
+                            }
+                            @*<p>@ViewBag.result</p>*@
                         </form>
 
                     </div>
